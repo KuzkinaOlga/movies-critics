@@ -1,0 +1,20 @@
+.footer {
+  margin-top: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  padding-bottom: 30px;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-item {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
