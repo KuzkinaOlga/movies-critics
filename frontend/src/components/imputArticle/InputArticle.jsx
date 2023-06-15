@@ -32,31 +32,37 @@ const InputArticle = () => {
 
   return (
     <div className="input-article_container">
-      <form className="input-article_form" onSubmit={handleSubmit}>
-        <TextField
-          label="Movie Title"
-          value={movieTitle}
-          onChange={(e) => setMovieTitle(e.target.value)}
-          fullWidth
-          margin="normal"
-          required
-        />
+      {user ? (
+        <form className="input-article_form" onSubmit={handleSubmit}>
+          <TextField
+            label="Movie Title"
+            value={movieTitle}
+            onChange={(e) => setMovieTitle(e.target.value)}
+            fullWidth
+            margin="normal"
+            required
+          />
 
-        <TextField
-          label="Main Text"
-          value={mainText}
-          onChange={(e) => setMainText(e.target.value)}
-          fullWidth
-          multiline
-          rows={4}
-          margin="normal"
-          required
-        />
+          <TextField
+            label="Main Text"
+            value={mainText}
+            onChange={(e) => setMainText(e.target.value)}
+            fullWidth
+            multiline
+            rows={4}
+            margin="normal"
+            required
+          />
 
-        <Button type="submit" variant="contained" color="primary">
-          Submit
-        </Button>
-      </form>
+          <Button type="submit" variant="contained" color="primary">
+            Submit
+          </Button>
+        </form>
+      ) : (
+        <h3 className="input-article_alert">
+          You need to register to view content !
+        </h3>
+      )}
     </div>
   );
 };

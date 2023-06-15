@@ -30,22 +30,43 @@ const NavBar = () => {
           <nav className={`menu-body ${nav ? "active-burger" : ""}`}>
             <ul className="menu-list">
               <li className="burger-menu_item">
-                <NavLink
-                  to="/"
-                  className="menu-link"
-                  onClick={() => setNav(false)}
-                >
-                  Login
-                </NavLink>
+                {user ? (
+                  ""
+                ) : (
+                  <NavLink
+                    to="/"
+                    className="menu-link"
+                    onClick={() => setNav(false)}
+                  >
+                    Login
+                  </NavLink>
+                )}
               </li>
               <li className="burger-menu_item">
-                <NavLink
-                  to="/registration"
-                  className="menu-link"
-                  onClick={() => setNav(false)}
-                >
-                  Registration
-                </NavLink>
+                {user ? (
+                  ""
+                ) : (
+                  <NavLink
+                    to="/registration"
+                    className="menu-link"
+                    onClick={() => setNav(false)}
+                  >
+                    Registration
+                  </NavLink>
+                )}
+              </li>
+              <li>
+                {user ? (
+                  <NavLink
+                    to="/blogs"
+                    className="menu-link"
+                    onClick={() => setNav(false)}
+                  >
+                    Blog
+                  </NavLink>
+                ) : (
+                  ""
+                )}
               </li>
             </ul>
           </nav>

@@ -1,10 +1,13 @@
 .footer {
-  margin-top: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--primary-color);
-  padding-bottom: 30px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
 }
 
 .footer-list {

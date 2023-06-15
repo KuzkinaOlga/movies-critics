@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/function-component-definition */
 import { useState } from "react";
