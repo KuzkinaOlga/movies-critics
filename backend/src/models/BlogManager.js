@@ -11,6 +11,12 @@ class BlogManager extends AbstractManager {
       [post.name, post.movies_details, post.user_id]
     );
   }
+
+  findAll() {
+    return this.database.query(
+      `select id, name, movies_details, user_id from  ${this.table}`
+    );
+  }
 }
 
 module.exports = BlogManager;
