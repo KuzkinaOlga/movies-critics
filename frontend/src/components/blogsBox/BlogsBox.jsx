@@ -16,7 +16,6 @@ const BlogsBox = () => {
     api
       .get("/blogs")
       .then((response) => {
-        console.warn(response.data);
         setBlogs(response.data);
       })
       .catch((error) => {

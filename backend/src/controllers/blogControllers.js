@@ -16,7 +16,6 @@ const validate = (data, forCreation = true) => {
 
 const addOne = async (req, res) => {
   const errors = validate(req.body);
-  console.warn(req.body);
   if (errors) {
     const errorMessages = errors.details.map((error) => error.message);
     return res.status(422).json({ errors: errorMessages });

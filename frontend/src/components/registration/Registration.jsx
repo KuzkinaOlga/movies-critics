@@ -44,8 +44,7 @@ const Registration = () => {
     };
     api
       .post("/users/", newUser)
-      .then((res) => {
-        console.warn(res);
+      .then(() => {
         setSuccess(true);
       })
       .catch((error) => {

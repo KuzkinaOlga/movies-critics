@@ -12,7 +12,6 @@ const NavBar = () => {
   const [nav, setNav] = useState(false);
   const { user } = useUser();
   const userId = user?.id;
-  console.warn(user);
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       setNav(!nav);
