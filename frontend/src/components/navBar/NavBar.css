@@ -121,6 +121,11 @@
     font-size: 25px;
     padding-left: 20px;
   }
+  .desktop-menu_name {
+    color: var(--text-color);
+    font-size: 25px;
+    padding-left: 20px;
+  }
   .desktop-menu_link:hover {
     text-decoration: underline;
   }

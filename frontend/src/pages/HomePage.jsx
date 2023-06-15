@@ -1,8 +1,8 @@
 /* eslint-disable react/function-component-definition */
-import Registration from "../components/registration/Registration";
+import Login from "../components/login/Login";
 
 const HomePage = () => {
-  return <Registration />;
+  return <Login />;
 };
 
 export default HomePage;

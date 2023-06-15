@@ -29,6 +29,7 @@ const browse = (req, res) => {
 // eslint-disable-next-line consistent-return
 const addOne = async (req, res) => {
   const errors = validate(req.body);
+
   if (errors) return res.sendStatus(422);
   const { name, firstname, mail, password } = req.body;
   const hashedPassword = await hashPassword(password);
@@ -108,6 +109,7 @@ const destroy = (req, res) => {
 // eslint-disable-next-line consistent-return
 const getUserByMailToNext = async (req, res, next) => {
   const { mail } = req.body;
+  console.warn(req.body);
   if (!mail) {
     return res.sendStatus(422);
   }

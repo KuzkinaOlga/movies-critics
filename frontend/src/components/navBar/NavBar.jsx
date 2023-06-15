@@ -6,10 +6,13 @@ import { CgMenuRight } from "react-icons/cg";
 import { MdClose } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 import "./NavBar.css";
+import { useUser } from "../../contexts/UserContext";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
-
+  const { user } = useUser();
+  const userId = user?.id;
+  console.warn(user);
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       setNav(!nav);
@@ -28,7 +31,7 @@ const NavBar = () => {
             <ul className="menu-list">
               <li className="burger-menu_item">
                 <NavLink
-                  to="/login"
+                  to="/"
                   className="menu-link"
                   onClick={() => setNav(false)}
                 >
@@ -61,18 +64,22 @@ const NavBar = () => {
           </div>
         </div>
         <nav className="desktop-menu">
-          <ul className="desktop-menu_list">
-            <li className="desktop-menu_item">
-              <NavLink to="/login" className="desktop-menu_link">
-                Login
-              </NavLink>
-            </li>
-            <li className="desktop-menu_item">
-              <NavLink to="/registration" className="desktop-menu_link">
-                Registration
-              </NavLink>
-            </li>
-          </ul>
+          {userId ? (
+            <h3 className="desktop-menu_name">{user.name}</h3>
+          ) : (
+            <ul className="desktop-menu_list">
+              <li className="desktop-menu_item">
+                <NavLink to="/" className="desktop-menu_link">
+                  Login
+                </NavLink>
+              </li>
+              <li className="desktop-menu_item">
+                <NavLink to="/registration" className="desktop-menu_link">
+                  Registration
+                </NavLink>
+              </li>
+            </ul>
+          )}
         </nav>
       </div>
     </header>

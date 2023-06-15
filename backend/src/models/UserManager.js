@@ -7,7 +7,7 @@ class UserManager extends AbstractManager {
 
   findAll() {
     return this.database.query(
-      `select id, name, firstname, mail, password from  ${this.table}`
+      `select id, name, firstname, mail from  ${this.table}`
     );
   }
 
