@@ -11,7 +11,6 @@ const Blog = ({ blog }) => {
     setLike(like + 1);
     setSelected(true);
   };
-  console.warn(selected);
 
   return (
     <div className="blog-container">

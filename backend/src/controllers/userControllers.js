@@ -109,7 +109,6 @@ const destroy = (req, res) => {
 // eslint-disable-next-line consistent-return
 const getUserByMailToNext = async (req, res, next) => {
   const { mail } = req.body;
-  console.warn(req.body);
   if (!mail) {
     return res.sendStatus(422);
   }

@@ -25,7 +25,6 @@ const Login = () => {
     api
       .post("/login", user)
       .then((response) => {
-        console.warn(response);
         // eslint-disable-next-line no-shadow
         const { token, user } = response.data;
         api.defaults.headers.authorization = `Bearer ${token}`;
