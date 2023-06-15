@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  padding-bottom: 10px;
+  padding-left: 20px;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-item {
+  margin-bottom: 10px;
+  cursor: pointer;
+}

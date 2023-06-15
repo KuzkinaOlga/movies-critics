@@ -1,0 +1,43 @@
+.registration-container {
+  margin-top: 100px;
+  text-align: center;
+}
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signup-hide {
+  display: none;
+  overflow: visible;
+}
+
+.signup-invalid {
+  display: inline-block;
+  color: var(--alert-color);
+  margin-top: 0.1rem;
+  font-size: 0.7rem;
+  text-align: start;
+}
+.css-sghohy-MuiButtonBase-root-MuiButton-root {
+  width: 300px;
+  margin-top: 20px !important;
+  background-color: var(--second-color) !important;
+}
+.css-17vbkzs-MuiFormControl-root-MuiTextField-root {
+  width: 300px !important;
+}
+
+.form-login_sub-container {
+  margin-top: 1.5rem;
+}
+
+.form-login_sub-link {
+  color: var(--second-color);
+  margin-left: 0.5rem;
+}
+.form-login_sub-link:hover,
+.form-login_sub-link:focus {
+  color: var(--second-color);
+}
